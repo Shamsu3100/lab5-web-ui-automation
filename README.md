@@ -28,7 +28,7 @@ first time you run a test.
 **Step 3. Confirm it works.** Run:
 
 ```bash
-python3 -c "from selenium import webdriver; d = webdriver.Chrome(); d.get('https://example.com'); print(d.title); d.quit()"
+python -c "from selenium import webdriver; d = webdriver.Chrome(); d.get('https://example.com'); print(d.title); d.quit()"
 ```
 
 A Chrome window should briefly open, visit example.com, and close. The
