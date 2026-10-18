@@ -22,7 +22,9 @@ class LoginPage:
 
     def open(self):
         self.driver.get(self.base_url + "/login")
-        WebDriverWait(self.driver, 10).until(
+        # 30 seconds: Render's free tier can take a while to wake up
+        # if the app has been idle.
+        WebDriverWait(self.driver, 30).until(
             EC.presence_of_element_located(self.USERNAME_INPUT)
         )
 
@@ -32,6 +34,6 @@ class LoginPage:
         self.driver.find_element(*self.SUBMIT_BUTTON).click()
 
     def wait_for_error(self):
-        return WebDriverWait(self.driver, 10).until(
+        return WebDriverWait(self.driver, 15).until(
             EC.visibility_of_element_located(self.ERROR_MESSAGE)
         )

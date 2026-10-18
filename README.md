@@ -2,7 +2,7 @@
 
 **Duration:** 2 hours  **Work mode:** groups
 
-**Application under test:** `"https://pytodo-lab5.onrender.com` (a running PyTodo app with login)
+**Application under test:** `<APP_URL>` (a running PyTodo app with login)
 
 ## 1. What you are building
 
@@ -28,7 +28,7 @@ first time you run a test.
 **Step 3. Confirm it works.** Run:
 
 ```bash
-python -c "from selenium import webdriver; d = webdriver.Chrome(); d.get('https://example.com'); print(d.title); d.quit()"
+python3 -c "from selenium import webdriver; d = webdriver.Chrome(); d.get('https://example.com'); print(d.title); d.quit()"
 ```
 
 A Chrome window should briefly open, visit example.com, and close. The
@@ -39,12 +39,12 @@ continuing, nothing else in this lab will work until this line succeeds.
 an environment variable. Set it once per terminal session:
 
 ```bash
-export PYTODO_URL="https://pytodo-lab5.onrender.com"
+export PYTODO_URL="<APP_URL>"
 ```
 
-On Windows PowerShell, use `$env:PYTODO_URL="https://pytodo-lab5.onrender.com"` instead.
+On Windows PowerShell, use `$env:PYTODO_URL="<APP_URL>"` instead.
 
-**Step 5. Log in once by hand first.** Open `"https://pytodo-lab5.onrender.com/login` in your own
+**Step 5. Log in once by hand first.** Open `<APP_URL>/login` in your own
 browser, and check that logging in with username `demo` and password
 `demo1234` works, and that you can create a task. This confirms the app
 itself is reachable before you automate it.
